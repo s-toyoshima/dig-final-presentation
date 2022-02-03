@@ -281,6 +281,15 @@ ol li:before {
   background: #fffbef;
 }
 
+/* テーブル */
+.table {
+  overflow: auto;
+  white-space: nowrap;
+}
+.table-scroll {
+  overflow: scroll;
+}
+
 /* シンプルリスト */
 /* https://saruwakakun.com/html-css/reference/ul-ol-li-design */
 .ul-simple {
