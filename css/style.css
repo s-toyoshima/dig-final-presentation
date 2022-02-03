@@ -303,5 +303,6 @@ ol li:before {
   color: blue;
 }
 .deleted-lists {
+  text-decoration: line-through;
   color: red;
 }
