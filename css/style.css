@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+/* 共通部分 
+------------------------------------------ */
+
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+/* a {
+  text-decoration: none;
+} */
+img {
+  max-width: 100%;
+}
+
+/* HEADER 
+------------------------------------------ */
+.logo {
+  width: 120px;
+  margin-top: 14px;
+}
+.main-nav {
+  display: flex;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+.main-nav li {
+  margin-left: 36px;
+}
+.main-nav a {
+  color: #432;
+}
+.main-nav a:hover {
+  color: #0bd;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+.noline {
+  text-decoration: none;
+}
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* 大きな背景画像 */
+/* .big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#home {
+  background-image: url(../images/1586177115926.jpeg);
+  min-height: 100vh;
+}
+#home .page-title {
+  text-transform: none;
+} */
+
+/* HOME 
+------------------------------------------ */
+.home-content {
+  text-align: center;
+  margin-top: 7%;
+  margin-bottom: 3%;
+}
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+
+/* 見出し */
+.page-title {
+  font-size: 3rem;
+  font-family: "Zen Antique", serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.title-in-content-page {
+  font-size: 1.35rem;
+  font-family: "Zen Antique", serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.h2-content-title {
+  padding: 1rem 2rem;
+  border-top: 3px solid #000;
+  background: #f4f4f4;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.h3-content-title {
+  padding: 1rem 2rem;
+  border-left: 6px double #000;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+/* ボタン */
+.button {
+  font-size: 1.375rem;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 10rem;
+  margin-bottom: 10px;
+  padding: 18px 32px;
+}
+.button:hover {
+  background-color: #0090aa;
+}
+
+.btn-flat-border {
+  display: inline-block;
+  padding: 0.3em 1em;
+  margin-bottom: 20px;
+
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.btn-flat-border:hover {
+  background: #67c5ff;
+  color: white;
+}
+/* 画像 */
+img.cad-img {
+  float: left;
+}
+img.hsr-img {
+  float: right;
+}
+
+.clearLeft {
+  clear: left;
+}
+.clearRight {
+  clear: right;
+}
+
+.img-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #d6f6ff;
+  padding: 30px 30px 10px;
+  border-radius: 40px;
+}
+.img.parts-list {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* 本文 */
+.under {
+  font-weight: bold;
+  background: linear-gradient(transparent 50%, #a8eaff 50%);
+}
+ol {
+  counter-reset: number; /*数字をリセット*/
+  list-style-type: none !important; /*数字を一旦消す*/
+  padding: 0.5em;
+  background: #f5faff;
+  width: 65%;
+}
+ol li {
+  position: relative;
+  padding-left: 30px;
+  line-height: 1.5em;
+  padding: 0.5em 0.5em 0.5em 30px;
+}
+
+ol li:before {
+  /* 以下数字をつける */
+  position: absolute;
+  counter-increment: number;
+  content: counter(number);
+  /*以下数字のデザイン変える*/
+  display: inline-block;
+  background: #5c9ee7;
+  color: white;
+  font-family: "Avenir", "Arial Black", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 50%;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  /*以下 上下中央寄せのため*/
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.text-link {
+  text-decoration: underline;
+}
+/* ポイント */
+.h3-point {
+  margin-top: 70px;
+  color: #505050; /*文字色*/
+  padding: 0.5em; /*文字周りの余白*/
+  display: inline-block; /*おまじない*/
+  line-height: 1.3; /*行高*/
+  background: #dbebf8; /*背景色*/
+  vertical-align: middle;
+  border-radius: 25px 0px 0px 25px; /*左側の角を丸く*/
+}
+
+.h3-point:before {
+  content: "●";
+  color: white;
+  margin-right: 8px;
+}
+
+/* 参考リンク */
+.h4-ref {
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+
+.h4-ref:before,
+.h4-ref:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+.h4-ref:before {
+  left: 0;
+}
+.h4-ref:after {
+  right: 0;
+}
+
+.point-list {
+  margin-left: 40px;
+}
+.btn-flat-double-border {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: double 4px #67c5ff;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.btn-flat-double-border:hover {
+  background: #fffbef;
+}
+
+/* シンプルリスト */
+/* https://saruwakakun.com/html-css/reference/ul-ol-li-design */
+.ul-simple {
+  box-shadow: 0px 0px 3px silver;
+  border: solid 1px whitesmoke;
+  padding: 0.5em 1em 0.5em 2.3em;
+  position: relative;
+  background: #fafafa;
+}
+
+.ul-simple .li-simple {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  list-style-type: none !important;
+}
+
+.ul-simple .li-simple:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0da";
+  position: absolute;
+  font-weight: 1000;
+  left: 1em; /*左端からのアイコンまで*/
+  color: rgba(105, 105, 105, 0.459); /*アイコン色*/
+}
+
+.table-total {
+  border-collapse: collapse;
+  border: solid 2px orange; /*表全体を線で囲う*/
+}
+
+.add-lists {
+  color: blue;
+}
+.deleted-lists {
+  color: red;
+}

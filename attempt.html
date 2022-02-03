@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Digital Innovation Garage プログラミング基礎講座の最終プレゼンページ"
+    />
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!-- Bulma：CSSフレームワーク -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>DIG プログラミング基礎 プレゼン</title>
+
+    <!-- ファビコン -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/2463094928357_a8c4a4df8d96935ad25b_88.png"
+    />
+  </head>
+</html>
+<body>
+  <header class="page-header wrapper">
+    <h1>
+      <a href="index.html"
+        ><img
+          class="logo"
+          src="images/2463094928357_a8c4a4df8d96935ad25b_88.png"
+          alt="DIGプレゼンホーム"
+      /></a>
+    </h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a class="noline" href="problem.html">改善したい問題</a></li>
+        <li><a class="noline" href="attempt.html">今回の取り組み</a></li>
+        <li><a class="noline" href="next.html">やり残したこと</a></li>
+        <li><a class="noline" href="point.html">工夫ポイント</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- 本文 -->
+  <div class="content">
+    <h1 class="title-in-content-page">
+      プログラミング基礎講座 プレゼンテーション
+    </h1>
+    <h2 class="h2-content-title">今回の取り組み</h2>
+    <div>
+      <p>
+        このページでは、職場で抱えるDX課題にたいして「今回取り組んだ内容」について紹介します。
+      </p>
+    </div>
+    <section class="section">
+
+      <h3 class="h3-content-title">部品表マスター</h3>
+
+      <!-- マスター部品表のCSVファイルを選択 -->
+      <div class="columns">
+        <div class="column">
+          <article class="message is-primary">
+            <div class="message-body">
+              <span id="master_message">ファイルを選択してください。</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <input id="master_csv_file" type="file" />
+        </div>
+      </div>
+      <!-- 総計結果の表示 -->
+      <table class="table is-fullwidth column is-one-third">
+        <thead>
+          <tr>
+            <th>総重量</th>
+            <th>想定総価格</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="totalWeight"></td>
+            <td id="totalPrice"></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- マスター部品表のテーブル -->
+      <table id="master-data" class="table  is-bordered table-container">
+        <thead>
+          <tr>
+            <th colspan="4"></th>
+            <th colspan="5">調達</th>
+            <th colspan="4">設計</th>
+          </tr>
+          <tr>
+            <th>No.</th>
+            <th>品番</th>
+            <th>名称</th>
+            <th>数量</th>
+            <th>担当</th>
+            <th>種別</th>
+            <th>調達ステータス</th>
+            <th>想定単価</th>
+            <th>想定価格</th>
+            <th>重量</th>
+            <th>定義</th>
+            <th>改訂</th>
+            <th>ﾌﾟﾛﾀﾞｸﾄ記述</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3 class="h3-content-title">更新された部品表</h3>
+
+      <!-- 更新された部品表のCSVファイルを選択 -->
+      <div class="columns">
+        <div class="column">
+          <article class="message is-primary">
+            <div class="message-body">
+              <span id="message">ファイルを選択してください。</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <input id="csv_file" type="file" />
+        </div>
+      </div>
+
+      <!-- マスター部品表に統合するボタン -->
+      <button class="btn-flat-border" id="update-button">マスター部品表を更新</button>
+      <!-- 更新された部品表のテーブル -->
+      <table id="updated-data" class="table is-bordered table-container">
+        <thead>
+          <tr>
+            <th>数量</th>
+            <th>ﾊﾟｰﾂ番号</th>
+            <th>ﾀｲﾌﾟ</th>
+            <th>名称</th>
+            <th>改訂</th>
+            <th>定義</th>
+            <th>ﾌﾟﾛﾀﾞｸﾄ記述</th>
+            <th>ｿｰｽ</th>
+            <th>番号</th>
+            <th>ｿｰｽ</th>
+            <th>ﾃﾞﾌｫﾙﾄ ﾓﾃﾞﾙ ｿｰｽ</th>
+            <th>Name</th>
+            <th>Owner</th>
+            <th>ｺﾒﾝﾄ</th>
+            <th>名前付きURLのﾘｽﾄ</th>
+            <th>子</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+  <!-- ＜次へ＞ボタン -->
+  <div class="home-content wrapper">
+    <a class="button noline" href="next.html">やり残したこと</a>
+  </div>
+  <!-- /.home-content -->
+  <script type="text/javascript" src="script.js"></script>
+</body>
