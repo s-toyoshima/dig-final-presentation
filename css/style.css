@@ -209,9 +209,19 @@ ol li:before {
 .text-link {
   text-decoration: underline;
 }
+/* next action page */
+.h3-next {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding: 0.25em 0.5em; /*上下 左右の余白*/
+  color: #494949; /*文字色*/
+  background: transparent; /*背景透明に*/
+  border-left: solid 5px #7db4e6; /*左線*/
+}
 /* ポイント */
 .h3-point {
-  margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   color: #505050; /*文字色*/
   padding: 0.5em; /*文字周りの余白*/
   display: inline-block; /*おまじない*/
@@ -231,6 +241,7 @@ ol li:before {
 .h4-ref {
   position: relative;
   display: inline-block;
+  margin-top: 20px;
   padding: 0 55px;
 }
 
@@ -255,6 +266,7 @@ ol li:before {
 
 .point-list {
   margin-left: 40px;
+  margin-bottom: 30px;
 }
 .btn-flat-double-border {
   display: inline-block;
